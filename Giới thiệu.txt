@@ -1,0 +1,15 @@
+Báo cáo Project 1
+Sinh viên: Nguy?n Ðình M?nh - 20173255
+S?n ph?m: Website bán qu?n áo th?i tràn trên m?ng v?i các ch?c nang hi?n th? s?n ph?m, thêm s?n ph?m vào gi? hàng, thanh toán gi? hàng, trang admin qu?n lý s?n ph?m, don hàng.
+
+Công ngh? s? d?ng:
+Angular 4
+Spring boot 4.0
+Java.version 1.8
+Mysql.version 8.0.13
+
+Cách ch?y Project:
+B1. Ch?y Angular trong cmd d?n ? D
+D:\WebManh> ng serve --o
+B2. Ch?y Spring boot
+Ch?n file Application.java, click chu?t ph?i > run as > Java Aplication

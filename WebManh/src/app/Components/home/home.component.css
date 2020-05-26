@@ -1,0 +1,406 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*CSS CHO PHAN SLIDE */
+.slideItem { 
+    position: relative;
+    background: #f6f6f6;
+}
+.slideItem .slideContent {
+    position: absolute;
+    top: 19%;
+    right: 6%;
+    width: 87%;
+    text-align: center;
+    z-index: 3;
+}
+
+.carousel-control.right,.carousel-control.left {
+    background: transparent;
+    color: black;
+}
+.slideContent h2 {
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #222222;
+}
+.slideContent p {
+ font-size: 20px;
+    letter-spacing: 4px;
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+a.right.carousel-control {
+    background: url(../../../assets/images/icon-right.png)  120px center no-repeat;
+}
+a.left.carousel-control {
+    background: url(../../../assets/images/icon-right.png)  120px center no-repeat;
+    transform: rotate(180deg);
+}
+
+
+/*3 khối quảng cáo*/
+
+.Card {
+    background: #fff;
+    height: 380px;
+    width: 100%;
+    position: relative;
+}
+
+.Card img {
+    opacity: 0.95;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale3d(1.05,1.05,1);
+}
+.Card:hover img {
+    opacity: 0.6;
+    transform: scale3d(1,1,1);
+}
+.CardContent{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 50px;
+}
+.CardContent p {
+    text-align: left;
+}
+.CardContent a{
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f9eeec;
+    bottom: 20px;
+    color: #fff;
+    display: inline-block;
+    padding-left: 13px;
+}
+.CardContent:hover a{
+    padding-left: 40px;
+}
+
+
+/*CSS CHO MAN HINH DI DONG ( IPAD VA IPHONE )*/
+@media (max-width: 576px){
+    *{}
+.Card {
+    height: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.motslide:after {content: "";position: absolute;width: 100%;height: 380px;background: rgba(0, 0, 0, 0.44);top: 0px;}
+
+a.right.carousel-control,a.left.carousel-control {
+    background-position: center;
+}
+
+.container2 .nutslide {
+    width: 148px;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    background: white;
+}
+
+.container2 h2 {
+    font-size: 17px;
+    margin: 0;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.container2 .desc {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: #d1d1d1;
+}
+
+}
+
+@media (min-width: 577px) and (max-width: 991px){
+    *{}
+}
+
+
+
+
+
+/* Phần Sản phẩm */
+
+/* bài khác */
+
+.comonSection{
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+}
+.sectionTitle{
+    position: relative;
+    margin-bottom: 53px;
+}
+.sectionTitle h2{
+    font-size: 25px;
+    letter-spacing: .375px;
+    text-transform: uppercase;
+    color: #222;
+    line-height: .7;
+    margin: 0 0 40px;
+    font-weight: 600;
+}
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+.titleBars{
+    position: relative;
+    width: 67px;
+    height: 3px;
+    margin: 0 auto 33px;
+}
+.titleBars:before{
+    width: 57px;
+    height: 1px;
+    background: #222;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+}
+.titleBars:after{
+    width: 57px;
+    height: 1px;
+    background: #222;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+}
+.sectionTitle p{
+    margin: 0 auto;
+    width: 70%;
+}
+.volta_tab1{
+    width: 100%;
+    position: relative;
+}
+.volta_tab1 ul{
+    margin: 0 0 60px;
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: .8;
+    text-align: center;
+}
+.volta_tab1 ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: .8;
+    text-align: center;
+    margin-right: 110px;
+    padding: 0 5px 8px;
+    position: relative;
+}
+.volta_tab1 ul li:after{
+    width: 0%;
+    height: 2px;
+    background: #222;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -2px;
+    content: "";
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 500ms;
+    -moz-transition: all ease 500ms;
+    -ms-transition: all ease 500ms;
+    -webkit-transition: all ease 500ms;
+    -o-transition: all ease 500ms;
+}
+.volta_tab1 ul li:hover:after, .volta_tab1 ul li.active:after{
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.volta_tab1 ul li:last-child{
+    margin-right: 0;
+}
+.volta_tab1 ul li a{
+    font-size: 13px;
+    color: #222;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: .8;
+    letter-spacing: .195px;
+}
+.singleProduct01{
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+.labelsPro{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background: #222222;
+    width: 57px;
+    height: 31px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing:  .221px;
+    color: #FFF;
+    z-index: 3;
+    font-size: 13px;
+    padding: 12px 0;
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+.labelsPro.salePro{
+    background: #6b6b6b;
+    left: 68px;
+}
+.labelsPro.newPro{
+    left: 33px;
+}
+.productThumb01{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 29px;
+}
+.productThumb01 img{
+    width: 95%;
+    height: auto;
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transition: all ease 500ms;
+    -moz-transition: all ease 500ms;
+    -ms-transition: all ease 500ms;
+    -webkit-transition: all ease 500ms;
+    -o-transition: all ease 500ms;
+}
+.singleProduct01:hover .productThumb01 img{
+    transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+/*Phần chữ sản phẩm*/
+.productDesc01{
+    width: 100%;
+    position: relative;
+}
+.productDesc01 h5{
+    margin: 0 0 10px;
+}
+.productDesc01 h5 a{
+    font-size: 15px;
+    letter-spacing: .225px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #222;
+    display: inline-block;
+}
+.productDesc01 h5 a:hover {
+    color: #777;
+}
+.cats{
+    margin-bottom: 20px;
+}
+.cats a{
+    color: #777;
+    font-size: 15px;
+    letter-spacing: .225px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.prices{
+    color: #222222;
+    font-weight: 700;
+    letter-spacing: .255px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+/*Đây là phần hình ảnh sản phẩm*/
+.productHover01{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .9);
+    transition: all ease 500ms;
+    opacity: 0;
+    visibility: hidden;
+}
+.singleProduct01:hover .productHover01{
+    opacity: 1;
+    visibility: visible;
+}
+.productHover01 .vol_btn{
+    position: absolute;
+    left: 0;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 200px;
+    transition: all ease 900ms;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* khi hover sản phẩm*/
+.singleProduct01:hover .productHover01 .vol_btn{
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    color: #fff;
+    background: #000000;
+}
+
+.vol_btn{
+    font-size: 13px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .195px;
+    display: inline-block;
+    border: thin solid #000000;
+    height: 50px;
+    padding: 20px 42px 18px;
+    font-family: 'Poppins', sans-serif;
+    transition: all ease 500ms;
+}
+
+.vol_btn:hover{
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    color: #fff;
+    background: #000000;
+}
+.text-center{
+    text-align: center;
+}
+.martinTop10{
+    margin-top: 10px;
+}
+
+
+

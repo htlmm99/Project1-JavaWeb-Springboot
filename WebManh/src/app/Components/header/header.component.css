@@ -1,0 +1,205 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&subset=vietnamese');
+
+
+
+*/
+.header_top{
+    width: 100%;
+    height: auto;
+    padding-bottom: 38px;
+}
+.topMenusHolder{
+    width: 100%;
+    position: relative;
+    padding-top: 56px;
+}
+.topMenus{
+    position: relative;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.topMenus li{
+    list-style: none;
+    float: left;
+    line-height: .8;
+    margin-right: 30px;
+    position: relative;
+}
+.topMenus li a{
+    color: #888888;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .36px;
+    font-weight: 500;
+    line-height: .8;
+    display: inline-block;
+}
+.topMenus li a:hover{
+    color: #333;
+}
+.topMenus li a i.frontIcon{
+    margin-right: 9px;
+    position: relative;
+}
+.topMenus ul.sub-menu {
+    background: #eeeeee none repeat scroll 0 0;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    z-index: 1;
+}
+.topMenus ul.sub-menu li {
+    display: block;
+    margin: 0;
+    padding: 7px 10px;
+    width: 100%;
+}
+.topMenus ul.sub-menu li a{
+
+}
+.logo {
+    width: 100%;
+    position: relative;
+    padding-top: 49px;
+    text-align: center;
+    font-size: xx-large;
+    font-family: serif;
+}
+
+.logo a{
+    color: #444444;
+}
+
+.Search{
+    width: 100%;
+    position: relative;
+    padding-top: 38px;
+}
+.Search form{
+    margin: 0;
+    float: right;
+    margin-left: 30px;
+}
+.Search input{
+    width: 250px;
+    height: 50px;
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    margin: 0;
+    padding: 0 20px;
+    font-style: italic;
+    color: #888888;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0) url("../../../assets/images/search.png")/*tpa=http://themewar.com/html/volta/images/search.png*/ no-repeat scroll 215px center;
+}
+.header {
+    position: relative;
+}
+
+.fixedHeader {
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    left: 0;
+    position: fixed !important;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.mainMenu{
+    position: relative;
+    text-align: center;
+    border-top: 1px solid #ebebeb;
+}
+.mainMenu ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.mainMenu ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: .8;
+    padding: 26px 35px 26px 36px;
+    position: relative;
+}
+.mainMenu ul li:after{
+    content: "";
+    height: 30px;
+    width: 1px;
+    background: #ebebeb;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.mainMenu ul li:last-child:after{
+    display: none;
+}
+.mainMenu ul li a{
+    font-size: 14px;
+    line-height: .8;
+    display: inline-block;
+    color: #444444;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .42px;
+}
+.mainMenu ul ul.sub-menu {
+    background: #fff;
+    left: auto;
+    position: absolute;
+    right: auto;
+    top: 70px;
+    width: 190px;
+    z-index: 99;
+    visibility: hidden;
+    opacity: 0;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.fixedHeader  .mainMenu ul ul.sub-menu{
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.mainMenu ul li:hover ul.sub-menu{
+    visibility: visible;
+    opacity: 1;
+    top: 64px;
+}
+.mainMenu ul ul.sub-menu li {
+    display: block;
+    padding: 14px 10px 14px 42px;
+    text-align: left;
+}
+.mainMenu ul ul.sub-menu li:after{
+    background: transparent;
+}
+.mainMenu ul ul.sub-menu li a{
+    color: #777777;
+}
+.mainMenu ul ul.sub-menu li a:hover{
+    color: #444444;
+}
+

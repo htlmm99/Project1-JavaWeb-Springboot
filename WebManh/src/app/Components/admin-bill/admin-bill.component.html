@@ -1,0 +1,47 @@
+<section class="comonSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="sectionTitle text-center">
+          <h2>QUẢN LÝ ĐƠN HÀNG</h2>
+          <div class="titleBars"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    </div>
+        <div class="row" id="table">
+      <div class="col-lg-12">
+        <h3>ĐƠN HÀNG HIỆN TẠI</h3>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th (click)="onSort('name')">Tên Khách hàng</th>
+              <th>Email</th>
+              <th>Số Điện thoại</th>
+              <th>Địa chỉ</th>
+              <th (click)="onSort('price')">Tiền</th>
+              <th>Ghi chú</th>
+              <th>Xem giỏ hàng</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of bills | sort : sortBy : sortValue; let i = index " >
+              <td>{{i+1}}</td>
+              <td>{{item.fullName}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.phone}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.total | currency : 'VND' : true }}</td>
+              <td>{{item.note}}</td>
+              <td><button type="button" class="btn btn-default" [routerLink]="['/admin', item.id, 'show']" >XEM</button></td>
+              <td><button type="button" class="btn btn-default" (click)="onDeleteBill(item.id)">DELETE</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

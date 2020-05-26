@@ -1,0 +1,56 @@
+<section class="header_top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-5">
+        <div class="topMenusHolder">
+          <ul class="topMenus clearfix poppins">
+            <li><a href="#"><i class="frontIcon fa fa-sign-in" [routerLink]="['/register']"></i>Đăng ký</a></li>
+            <li><a href="#"  data-toggle="collapse" data-target="#accountTogg">Tài khoản <i class="fa fa-angle-down"></i></a>
+              <ul class="sub-menu collapse" id="accountTogg">
+                <li><a href="#" [routerLink]="['/admin']">Tài khoản</a></li>
+                <li><a href="#" [routerLink]="['/login']">Đăng nhập</a></li>
+                <li><a href="#" (click) = "onLogOut()">Đăng xuất</a></li>
+              </ul>
+            </li>
+            <li><a href="#" [routerLink]="['/cart']"><i class="frontIcon fa fa-shopping-cart "></i>Giỏ hàng</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-2">
+        <div class="logo">
+          <a href="/" [routerLink]="['/']">MANH</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-5">
+        <div class="Search clearfix">
+          <form method="post">
+            <input type="Search" name="s" id="s" placeholder="Tìm kiếm" [(ngModel)]="search" (search) = "onSearch()"  />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<header class="header" id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <nav class="mainMenu poppins">
+          <ul>
+            <li class="has-menu-items"><a href="#" [routerLink]="['/']">Trang chủ</a></li>
+            <li class="has-menu-items"><a>Sản phẩm</a>
+              <ul class="sub-menu">
+                <li><a href="" [routerLink]="['/productmen']">Sản phẩm Nam</a></li>
+                <li><a href="" [routerLink]="['/productwomen']">Sản phẩm Nữ</a></li>
+                <li><a href="" [routerLink]="['/productaccessories']">Phụ Kiện</a></li>
+              </ul>
+            </li>
+            <li class="has-menu-items"><a href="#" [routerLink]="['/about']">Thông tin</a>
+            </li>
+            <li><a href="" [routerLink]="['/contact']">Liên hệ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

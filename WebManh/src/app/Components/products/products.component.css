@@ -1,0 +1,220 @@
+.comonSection{
+    margin-top: 50px;
+}
+.itemImg{
+    width: 100%;
+    margin-bottom: 53px;
+    text-align: center;
+}
+.itemImg img{
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+.productinfoTop {
+    margin-bottom: 37px;
+}
+.productSiTitle{
+    font-size: 18px;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.prices{
+    font-size: 25px;
+    font-weight: 700;
+    color: #222222;
+    margin: 0;
+    position: relative;
+    left: -5px;
+}
+.sinShopCont {
+    margin-bottom: 40px;
+}
+.stokPrduct{
+    font-size: 13px;
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0 30px;
+}
+
+.quantityW {
+    display: inline-block;
+    margin-right: 37px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 31px;
+
+}
+.quantityW h4{
+    position: absolute;
+    left: 0;
+    top: 16px;
+    font-size: 13px;
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.quantity {
+    border: 1px solid #d0d0d0;
+    height: 38px;
+    position: relative;
+    text-align: center;
+    width: 122px;
+    margin-left: 32px;
+}
+.quantity input[type="text"] {
+    background: #444444;
+    border: medium none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    height: 38px;
+    left: 0;
+    letter-spacing: 0.52px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -1px;
+    width: 48px;
+}
+.quantity .qtyBtn {
+    background: #fff;
+    border: medium none;
+    border-radius: 0;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 300;
+    height: 36px;
+    letter-spacing: 0.8px;
+    position: absolute;
+    transition: all 500ms ease 0s;
+    width: 36px;
+}
+.quantity .qtyBtn.btnMinus {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.quantity .qtyBtn.btnPlus {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.vol_btn:hover{
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    color: #fff;
+    background: #222;
+}
+.vol_btn {
+  font-size: 13px;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  border: thin solid #000000;
+  height: 50px;
+  padding: 20px 42px 18px;
+  font-family: 'Poppins', sans-serif;
+  transition: all ease 500ms;
+  background: #000000;
+
+}
+
+
+.singprotabW {
+    margin-bottom: 53px;
+}
+.singProDectabnav{
+    margin: 0 0 29px;
+    padding: 0;
+    list-style:none;
+}
+.singProDectabnav li{
+    display: inline-block;
+    margin-right: 56px;
+}
+.singProDectabnav li a{
+    font-size: 13px;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: .19px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+.singProDectabnav li a:after{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    margin: auto;
+    content: '';
+    width: 0;
+    height: 1px;
+    background: #222222;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+.singProDectabnav li a:hover:after,
+.singProDectabnav li.active a:after{
+    width: 100%;
+}
+.comment_forms{
+    position: relative;
+    width: 100%;
+}
+.comment_form_title{
+    font-size: 18px;
+    color: #3b3f42;
+    text-transform: uppercase;
+    margin: 0 0 50px;
+}
+
+.comment_forms input[type="text"], .comment_forms input[type="email"]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dadada;
+    padding: 0 22px;
+    color: #9a9a9a;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+.comment_forms textarea{
+    width: 100%;
+    height: 193px;
+    border: 1px solid #dadada;
+    padding: 6px 22px;
+    color: #9a9a9a;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    resize: none;
+}
+
+.com_submit{
+    width: 195px;
+    height: 43px;
+    background: #222222;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .36px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 3px;
+}

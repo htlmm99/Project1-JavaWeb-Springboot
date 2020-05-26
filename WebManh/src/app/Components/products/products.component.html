@@ -1,0 +1,80 @@
+<section class="comonSection noPaddingBottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="itemImg">
+          <img src="{{product.img}}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-7 noPaddingLeft">
+        <div class="singleProInfo">
+          <div class="productinfoTop">
+            <h2 class="productSiTitle">{{product.name}}</h2>
+            <p class="prices">&nbsp;{{product.price | currency : 'VND' : true }}</p>
+          </div>
+        </div>
+        <div class="sinShopCont">
+          <p>
+            {{product.sub}}
+          </p>
+        </div>
+        <h3 class="stokPrduct">Còn: {{product.amount - amount }} sản phẩm</h3>
+        <div class="quantityW">
+          <h4>Số lượng:</h4>
+          <div class="quantity">
+            <button class="qtyBtn btnMinus" (click)="onMinus()">-</button>
+            <input type="text" class="input-text qty text carqty" [(ngModel)]="amount">
+            <button class="qtyBtn btnPlus" (click)="onPlus()">+</button>
+          </div>
+        </div>
+        <div class="cartButtons">
+          <a class="vol_btn" (click)="onAddCart()">Thêm vào giỏ</a>
+        </div>
+      </div>
+    </div>
+    <div class="row singprotabW">
+      <div class="col-lg-12">
+        <ul class="singProDectabnav">
+          <li class="active"><a data-toggle="tab" href="#desc">Thông tin sản phẩm</a></li>
+          <li><a data-toggle="tab" href="#review">Nhận xét</a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="desc" class="tab-pane fade in active">
+            <div>
+              {{product.sub}}
+            </div>
+          </div>
+          <div id="review" class="tab-pane fade">
+            <div class="comment_forms">
+              <h4 class="comment_form_title">Thêm Nhận xét</h4>
+              <form action="#" method="post">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <input type="text" placeholder="Tên của bạn *" name="com_name">
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" placeholder="Email của bạn *" name="com_email">
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" placeholder="WEBSITE" name="com_web">
+                  </div>
+                  <div class="col-lg-12">
+                    <textarea placeholder="Nhận xét của bạn *" name="com_content"></textarea>
+                  </div>
+                  <div class="col-lg-12 text-left">
+                    <input type="submit" class="com_submit" value="Nhận xét">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="seperator"></div>
+      </div>
+    </div>
+  </div>
+</section>

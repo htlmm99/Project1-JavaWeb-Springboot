@@ -1,0 +1,27 @@
+<section class="comonSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">ĐĂNG NHẬP</h5>
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Tên đăng nhập" required autofocus #username>
+                <label for="inputEmail">Tên đăng nhập</label>
+              </div>
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mật khẩu" required #password>
+                <label for="inputPassword">Mật khẩu</label>
+              </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" (click)="onLogin(username.value, password.value)">Đăng nhập</button>
+              <div class="alert alert-warning" role="alert" *ngIf="error == -1">
+                Sai Tên đăng nhập hoặc mật khẩu
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

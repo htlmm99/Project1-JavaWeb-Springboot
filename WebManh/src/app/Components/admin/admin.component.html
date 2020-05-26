@@ -1,0 +1,46 @@
+<section class="comonSection">
+  <div class="container">
+    <h1>Trang quản lý admin</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-2 mb-3">
+        <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="product-tab" data-toggle="tab" href="#product" role="tab" aria-controls="product" aria-selected="true">SẢN PHẨM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="men-tab" data-toggle="tab" href="#men" role="tab" aria-controls="men" aria-selected="false">SẢN PHẨM NAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="women-tab" data-toggle="tab" href="#women" role="tab" aria-controls="women" aria-selected="false">SẢN PHẨM NỮ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pk-tab" data-toggle="tab" href="#pk" role="tab" aria-controls="pk" aria-selected="false">PHỤ KIỆN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="bill-tab" data-toggle="tab" href="#bill" role="tab" aria-controls="bill" aria-selected="false">ĐƠN HÀNG</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="product" role="tabpanel" aria-labelledby="product-tab">
+            <app-product-list></app-product-list>
+          </div>
+          <div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">
+            <app-admin-men></app-admin-men>
+          </div>
+          <div class="tab-pane fade show active" id="women" role="tabpanel" aria-labelledby="women-tab">
+            <app-admin-women></app-admin-women>
+          </div>
+          <div class="tab-pane fade" id="pk" role="tabpanel" aria-labelledby="pk-tab">
+            <app-admin-pk></app-admin-pk>
+          </div>
+          <div class="tab-pane fade" id="bill" role="tabpanel" aria-labelledby="bill-tab">
+            <app-admin-bill></app-admin-bill>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

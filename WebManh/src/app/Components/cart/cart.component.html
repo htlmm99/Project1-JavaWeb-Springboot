@@ -1,0 +1,84 @@
+<section class="comonSection cartSec">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="cartHeadings">Giỏ hàng của bạn</h3>
+      </div>
+      <div class="col-lg-12">
+        <form action="#" method="post">
+          <table class="shop_table shop_table_responsive">
+            <thead>
+              <tr>
+                <th>Hình ảnh</th>
+                <th>Sản phẩm</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Xóa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cart_item wow fadeInUp animated" *ngFor="let item of cart_product; let i = index">
+                <td class="product-thumbnail">
+                  <a href=""><img alt="" src="{{item.product.img}}"></a>
+                </td>
+                <td class="product-name">
+                  <a href="#" [routerLink]="['/product', item.product.id]">{{item.product.name }}</a>
+                </td>
+                <td class="product-price">
+                  <span>{{item.product.price | currency : 'VND' : true }}</span>
+                </td>
+                <td class="product-quantity">
+                  <div class="quantity">
+                    <button class="qtyBtn btnMinus" (click)="onMinus(item, i)">-</button>
+                    <input type="text" name="qty" value="{{item.amount}}" >
+                    <button class="qtyBtn btnPlus" (click)="onPlus(item, i)">+</button>
+                  </div>
+                </td>
+                <td class="product-subtotal">
+                  <span>{{item.total | currency : 'VND' : true}}</span>
+                </td>
+                <td class="product-remove">
+                  <a  (click)="onDeleteCart(item.id)">
+                    <i class="fa fa-remove"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-7 col-xs-12">
+        <div class="cart_totals">
+          <h2>Tổng giá tiền</h2>
+          <table class="shop_table shop_table_responsive">
+            <tbody>
+              <tr class="cart-subtotal">
+                <th>Giá sản phẩm</th>
+                <td><span>{{subTotal | currency : 'VND' : true}}</span></td>
+              </tr>
+              <tr class="shipping">
+                <th>Phí vận chuyển</th>
+                <td>
+                  <span>{{ship | currency : 'VND' : true}}</span>
+                </td>
+              </tr>
+              <tr class="order-total">
+                <th>Tổng cộng</th>
+                <td><strong><span>{{subTotal + ship | currency : 'VND' : true}}</span></strong> </td>
+              </tr>
+              <tr>
+                <td><a class="vol_btn" href="#" [routerLink]="['/']">MUA SẮM TIẾP<i class=""></i></a>
+                  <a class="vol_btn" href="/cart">LOAD GIỎ HÀNG<i class=""></i></a>
+                  <a class="vol_btn" href="#" [routerLink]="['/checkout']">THANH TOÁN<i class=""></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

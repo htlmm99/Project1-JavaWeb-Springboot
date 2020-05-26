@@ -1,0 +1,219 @@
+<div class="SlieHome">
+  <div id="Slider" class="carousel slide" data-ride="carousel" data-interval="0">
+    <ol class="carousel-indicators">
+      <li data-target="#Slider" data-slide-to="0" class="active"></li>
+      <li data-target="#Slider" data-slide-to="1"></li>
+      <li data-target="#Slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="slideItem">
+          <img src="../../../assets/images/01.png" alt="" class="anhsl img-fluid">
+          <div class="slideContent poppins">
+            <div class="row">
+              <div class="col-sm-7 push-sm-5">
+                <h2>THỜI TRANG NỮ</h2>
+                <p>Giảm giá 30% với bộ sưu tập mới</p>
+                <a href="/product_women" [routerLink]="['/productwomen']" class="vol_btn  btn btn-outline-secondary"> Mua ngay <i class=" "></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="slideItem">
+          <img src="../../../assets/images/03.png" alt="" class="anhsl img-fluid">
+          <div class="slideContent poppins">
+            <div class="row">
+              <div class="col-sm-7 push-sm-5">
+                <h2>THỜI TRANG PHỤ KIỆN</h2>
+                <p>Giảm giá 30% với bộ sưu tập mới</p>
+                <a href="/product_accessores" class="vol_btn  btn btn-outline-secondary" [routerLink]="['/productaccessories']"> Mua ngay <i class=""></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="slideItem">
+          <img src="../../../assets/images/05.png" alt="" class="anhsl img-fluid">
+          <div class="slideContent poppins">
+            <div class="row">
+              <div class="col-sm-7 push-sm-5">
+                <h2>THỜI TRANG NAM</h2>
+                <p>Giảm giá 30% với bộ sưu tập mới</p>
+                <a href="/product_men" class="vol_btn  btn btn-outline-secondary" [routerLink]="['/productmen']"> Mua ngay <i class=""></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#Slider" role="button" data-slide="prev">
+      <span class="sr-only">Quay lại</span>
+    </a>
+    <a class="right carousel-control" href="#Slider" role="button" data-slide="next">
+      <span class="sr-only">Tiếp tục</span>
+    </a>
+  </div>
+</div>
+<section class="comonSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="Card">
+          <img src="/assets/images/c1.jpg" />
+          <div class="CardContent poppins">
+            <p><a href="" [routerLink]="['/productmen']">THỜI TRANG NAM</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="Card">
+          <img src="/assets/images/c3.jpg" />
+          <div class="CardContent poppins">
+            <p><a href="" [routerLink]="['/productwomen']">THỜI TRANG NỮ</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="Card">
+          <img src="/assets/images/c2.jpg" />
+          <div class="CardContent poppins">
+            <p><a href="" [routerLink]="['/productaccessories']">PHỤ KIỆN</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="comonSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="sectionTitle text-center">
+          <h2 class="poppins">SẢN PHẨM</h2>
+          <div class="titleBars"></div>
+          <p>
+            Các sản phẩm của chúng tôi luôn được cật nhật với phong cách mới nhất, mức giá ưu đãi nhất. Luôn sẵn sàng phục vụ quý khách.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="volta_tab1">
+          <ul class="clearfix poppins" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#tab_01" aria-controls="tab_01" role="tab" data-toggle="tab">Gần đây</a>
+            </li>
+            <li role="presentation">
+              <a href="#tab_02" aria-controls="tab_02" role="tab" data-toggle="tab">Thời trang Nam</a>
+            </li>
+            <li role="presentation">
+              <a href="#tab_03" aria-controls="tab_03" role="tab" data-toggle="tab">Thời trang Nữ</a>
+            </li>
+            <li role="presentation">
+              <a href="#tab_04" aria-controls="tab_04" role="tab" data-toggle="tab">Phụ Kiện</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="tab_01">
+              <div class="row">
+                <ng-template ngFor let-item [ngForOf]="products" let-i="index">
+                  <div class="col-lg-4 col-sm-6" *ngIf="i < 9">
+                    <div class="singleProduct01 text-center">
+                      <div class="productThumb01">
+                        <img src="{{item.img}}" alt="" />
+                        <div class="productHover01">
+                          <button type="button" class="vol_btn" (click)="onAddCart(item)">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                      <div class="productDesc01">
+                        <h5><a href="" class="poppins" [routerLink]="['/product',item.id]">{{item.name}}</a></h5>
+                        <p class="cats"><a href="">{{item.type}}</a></p>
+                        <p class="prices">{{item.price | currency : 'VND' : true}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab_02">
+              <div class="row">
+                <ng-template ngFor let-item [ngForOf]="products" let-i="index">
+                  <div class="col-lg-4 col-sm-6" *ngIf="item.type === 'Nam' && i < 9">
+                    <div class="singleProduct01 text-center">
+                      <div class="productThumb01">
+                        <img src="{{item.img}}" alt="" />
+                        <div class="productHover01">
+                          <button type="button" class="vol_btn" (click)="onAddCart(item)">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                      <div class="productDesc01">
+                        <h5><a href="" class="poppins" [routerLink]="['/product',item.id]">{{item.name}}</a></h5>
+                        <p class="cats"><a href="">{{item.type}}</a></p>
+                        <p class="prices">{{item.price | currency : 'VND' : true}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <div class="col-lg-12 text-center martinTop10">
+                  <a href="#" class="vol_btn" [routerLink]="['/productmen']">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab_03">
+              <div class="row">
+                <ng-template ngFor let-item [ngForOf]="products" let-i="index">
+                  <div class="col-lg-4 col-sm-6" *ngIf='item.type == "Nữ"'>
+                    <div class="singleProduct01 text-center">
+                      <div class="productThumb01">
+                        <img src="{{item.img}}" alt="" />
+                        <div class="productHover01">
+                          <button type="button" class="vol_btn" (click)="onAddCart(item)">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                      <div class="productDesc01">
+                        <h5><a href="" class="poppins" [routerLink]="['/product',item.id]">{{item.name}}</a></h5>
+                        <p class="cats"><a href="">{{item.type}}</a></p>
+                        <p class="prices">{{item.price | currency : 'VND' : true}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <div class="col-lg-12 text-center martinTop10">
+                  <a href="#" class="vol_btn" [routerLink]="['/productwomen']">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="tab_04">
+              <div class="row">
+                <ng-template ngFor let-item [ngForOf]="products" let-i="index">
+                  <div class="col-lg-4 col-sm-6" *ngIf="item.type === 'Phụ Kiện'">
+                    <div class="singleProduct01 text-center">
+                      <div class="productThumb01">
+                        <img src="{{item.img}}" alt="" />
+                        <div class="productHover01">
+                          <button type="button" class="vol_btn" (click)="onAddCart(item)">Thêm vào giỏ</button>
+                        </div>
+                      </div>
+                      <div class="productDesc01">
+                        <h5><a href="" class="poppins" [routerLink]="['/product',item.id]">{{item.name}}</a></h5>
+                        <p class="cats"><a href="">{{item.type}}</a></p>
+                        <p class="prices">{{item.price | currency : 'VND' : true}}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <div class="col-lg-12 text-center martinTop10">
+                  <a href="#" class="vol_btn" [routerLink]="['/productaccessories']">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&subset=vietnamese');
+
+.comonSection{
+    padding-top: 50px;
+    font-size: 15px;
+    color: #777777;
+    line-height: 26px;
+    letter-spacing: .45px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+}
+.nav-pills li.nav-item {
+    width: 100%;
+}
+
+.nav-pills .nav-link.active{
+	background-color: black;
+	color: #fff;
+}
+
+.nav-link{
+	color: black;
+}

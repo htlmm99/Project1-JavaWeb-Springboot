@@ -1,0 +1,95 @@
+<section class="comonSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 checkoutForms">
+        <h4 class="comonHeading">Thông tin cá nhân</h4>
+        <form [formGroup]="formData" (ngSubmit) = "onClickSubmit(formData.value)">
+          <div class="form-row">
+            <div class="form-group col-lg-12">
+              <label class="chek_label">Họ và tên *</label>
+              <input type="text" class="form-control" placeholder="VD: Nguyễn Đình Mạnh" formControlName="fullName">
+            </div>
+            <div class="form-group col-lg-12">
+              <label  class="chek_label">Địa chỉ Email *</label>
+              <input type="Email" class="form-control" placeholder="VD: manh@gmail.com" formControlName="email">
+            </div>
+            <div class="form-group col-lg-12">
+              <label  class="chek_label">Số điện thoại *</label>
+              <input type="text" class="form-control" placeholder="VD: 0123456789" formControlName="phone">
+            </div>
+            <div class="form-group col-lg-12">
+              <label  class="chek_label">Tỉnh/ Thành phố *</label>
+              <input type="text" class="form-control" placeholder="VD: Hà Nội" formControlName="city">
+            </div>
+            <div class="form-group col-lg-12">
+              <label  class="chek_label">Quận/ Huyện *</label>
+              <input type="text" class="form-control" placeholder="VD: Hai Bà Trưng" formControlName="town">
+            </div>
+            <div class="form-group col-lg-12">
+              <label  class="chek_label">Địa chỉ chi tiết *</label>
+              <input type="text" class="form-control" placeholder="VD: Số 1 Đại Cồ Việt" formControlName="address">
+            </div>
+            <div class="form-group col-lg-12">
+              <label  class="chek_label">Ghi chú</label>
+              <input type="text" class="form-control" placeholder="Nếu có" formControlName="note">
+            </div>
+          </div>
+          <div style="text-align: center;">
+          <button type="submit" class="btn-primary|secondary|success|danger|warning|info|light|dark btn-sm|btn-lg vol_btn" [disabled] = "!formData.valid">Xác nhận thông tin</button>
+          <a class="alert alert-success col-lg-6 float-right" style="text-align: center;" role="alert" *ngIf="thanhcong">
+            Xác nhận thành công</a>
+        </div>
+        </form>
+      </div>
+      <div class="col-sm-6">
+        <h3 class="comonHeading">Đơn hàng của bạn</h3>
+        <div id="order_review" class="checkout-order">
+          <div class="orderbg">
+            <table class="shop_table">
+              <thead>
+                <tr>
+                  <th class="product-name">Sản phẩm</th>
+                  <th class="product-total">Giá tiền</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-template ngFor let-item [ngForOf]="cart_product" let-i="index">
+                <tr class="cart_item">
+                  <td class="product-name">
+                    {{item.product.name}} - <strong class="product-quantity">{{item.amount}}</strong> </td>
+                  <td class="product-total">
+                    <span>{{item.total | currency : 'VND' : true }}</span>
+                  </td>
+                </tr>
+              </ng-template>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Thành tiền</th>
+                  <td><span>{{subTotal | currency : 'VND' : true }}</span></td>
+                </tr>
+                <tr>
+                  <th>Phí Ship</th>
+                  <td><span>{{ship | currency : 'VND' : true }}</span></td>
+                </tr>
+                <tr class="order-total">
+                  <th>Tổng cộng</th>
+                  <td><span>{{subTotal + ship | currency : 'VND' : true }}</span> </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <div class="orderbg mar30">
+            <div class="checkout-payment">
+              <input type="radio" value="bacs" checked="checked" />
+              <label>Thanh toán tại nhà</label>
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <a class="vol_btn" (click)="onBill()">Xác nhận đặt hàng<i class=""></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<section class="comonSection">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="sectionTitle text-center">
+          <h2>QUẢN LÝ SẢN PHẨM</h2>
+          <div class="titleBars"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <button type="submit" id="con_submit" [routerLink]="['/admin/productsadd']">THÊM SẢN PHẨM</button>
+      </div>
+    </div>
+        <div class="row" id="table">
+      <div class="col-lg-12">
+        <h3>SẢN PHẨM NAM</h3>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tên</th>
+              <th>Loại</th>
+              <th>Hình ảnh</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Sửa</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of products" >
+            <ng-container *ngIf="item.type == 'Nam'">
+              <td>{{item.id}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.type}}</td>
+              <td><img src="{{item.img}}" [style.height.px]="200"></td>
+              <td>{{item.price | currency : 'VND' : true }}</td>
+              <td>{{item.sl}}</td>
+              <td><button type="button" class="btn btn-default" [routerLink]="['/admin', item.id, 'edit']">EDIT</button></td>
+              <td><button type="button" class="btn btn-default" (click)="onDeleteProduct(item.id)">DELETE</button></td>
+              </ng-container>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

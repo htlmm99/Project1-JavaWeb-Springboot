@@ -1,0 +1,319 @@
+.pageTitleSection {
+  position: relative;
+  background: url(../../../assets/images/men/slide.jpg) no-repeat center center;
+  background-size: 100%;
+  padding: 100px 0;
+}
+
+.pageTitleContent h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .525px;
+  font-family: 'Cabin', sans-serif;
+  margin: 0 0 78px;
+  line-height: .8;
+  color: #fff;
+}
+
+.pageTitleContent {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  line-height: 26px;
+  letter-spacing: .45px;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+}
+
+.breadcrumbs a,
+span {
+  color: #fff;
+  display: inline-block;
+  line-height: .8;
+}
+
+.comonSection {
+  margin-top: 50px;
+}
+
+.shop_heading {
+  position: relative;
+  margin: 0 0 40px;
+  padding-bottom: 51px;
+  background: url(../../../assets/images/bar.png) repeat-x left bottom;
+}
+
+.shop_heading h2 {
+  font-size: 25px;
+  margin: 0;
+  color: #222222;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.shopAccessRow {
+  margin-bottom: 70px;
+}
+
+.shopAccessLefts {
+  position: relative;
+  text-align: left;
+}
+
+.shopAccessLefts a {
+  width: 100px;
+  height: 50px;
+  background: #ecfbf8;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 12px 0;
+  margin-right: 17px;
+
+}
+
+.shopAccessLefts a i {
+  bottom: -3px;
+  color: #222222;
+  font-size: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.shopAccessLefts span {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #222222;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+
+.shopShorts {
+  position: relative;
+  text-align: right;
+}
+
+.shopShortList {
+  display: inline-block;
+  width: 160px;
+  position: relative;
+}
+
+.shopShortList select {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #cecece;
+  font-size: 14px;
+  color: #222222;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 14px 0 14px 20px;
+}
+
+.shopShortList select option {
+  padding: 10px 10px 10px 20px;
+  border-bottom: 1px solid #cecece;
+}
+
+
+
+.singleProduct01 {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.productThumb01 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 29px;
+}
+
+.productThumb01 img {
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all ease 500ms;
+  -moz-transition: all ease 500ms;
+  -ms-transition: all ease 500ms;
+  -webkit-transition: all ease 500ms;
+  -o-transition: all ease 500ms;
+}
+
+.singleProduct01:hover .productThumb01 img {
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.newLabel {
+  width: 70px;
+  height: 35px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: url(../../../assets/images/newLabel.png) no-repeat left center;
+  font-size: 12px;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 13px 0 0 14px;
+  text-align: left;
+}
+
+/*Phần chữ sản phẩm*/
+.productDesc01 {
+  width: 100%;
+  position: relative;
+}
+
+.productDesc01 h5 {
+  margin: 0 0 10px;
+}
+
+.productDesc01 h5 a {
+  font-size: 15px;
+  letter-spacing: .225px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #222;
+  display: inline-block;
+}
+
+.productDesc01 h5 a:hover {
+  color: #777;
+}
+
+.cats {
+  margin-bottom: 20px;
+}
+
+.cats a {
+  color: #777;
+  font-size: 15px;
+  letter-spacing: .225px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.prices {
+  color: #222222;
+  font-weight: 700;
+  letter-spacing: .255px;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+/*Đây là phần hình ảnh sản phẩm*/
+.productHover01 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .9);
+  transition: all ease 500ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.singleProduct01:hover .productHover01 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.productHover01 .vol_btn {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 200px;
+  transition: all ease 900ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* khi hover sản phẩm*/
+.singleProduct01:hover .productHover01 .vol_btn {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  color: #fff;
+  background: #000000;
+}
+
+.vol_btn {
+  font-size: 13px;
+  color: #222;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .195px;
+  display: inline-block;
+  border: thin solid #000000;
+  height: 50px;
+  padding: 20px 42px 18px;
+  font-family: 'Poppins', sans-serif;
+  transition: all ease 500ms;
+}
+
+.mtop32 {
+  margin-top: 32px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sop_navigation {
+  position: relative;
+  width: 100%;
+}
+
+.sop_navigation a {
+  color: #a2a2a2;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 44px;
+  letter-spacing: normal;
+  line-height: 0.8;
+  margin-right: 6px;
+  padding: 17px 0;
+  width: 44px;
+  border-radius: 50%;
+}
+
+.sop_navigation a.next {
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+.sop_navigation a:hover,
+.sop_navigation a.current {
+  background: #222222;
+  color: #fff;
+}
+
+.mtop32 {
+  margin-top: 32px;
+}
